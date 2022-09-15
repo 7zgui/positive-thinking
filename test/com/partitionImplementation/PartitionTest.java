@@ -1,5 +1,6 @@
 package com.partitionImplementation;
 
+import com.partitionImplementation.exception.OutOfRangeException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -53,6 +54,13 @@ public class PartitionTest {
     @Test
     public void testOfSixElements() {
         assertTrue(Partition.partition(numbers, 6).size() == 1);
+    }
+
+    //Testing if the exception is raised when providing
+    @Test(expected = OutOfRangeException.class)
+    public void testOfIndexOutOfRangeException()  {
+        Partition<Integer> result= Partition.partition(numbers, 5);
+        result.get(7);
     }
 
 
