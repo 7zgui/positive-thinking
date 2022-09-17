@@ -1,5 +1,4 @@
-package com.partitionImplementation;
-
+import com.partitionImplementation.Partition;
 import com.partitionImplementation.exception.OutOfRangeException;
 import org.junit.After;
 import org.junit.Before;
@@ -14,7 +13,7 @@ import static org.junit.Assert.*;
  * @author Mohamed ouokki on 9/15/22
  * @project positive-thinking
  */
-public class PartitionTest {
+public class TestPartition {
     List<Integer> numbers;
 
     @Before
