@@ -40,3 +40,5 @@ On the left side bar click on Libraries > click on '+' then Java (navigate to ta
 
 ##  Use the library added
 
+![alt Example of implementing the library](https://github.com/7zgui/positive-thinking/blob/main/example.png)
+
