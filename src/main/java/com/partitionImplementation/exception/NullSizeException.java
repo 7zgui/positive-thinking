@@ -4,12 +4,12 @@ package com.partitionImplementation.exception;
  * @author Mohamed ouokki on 9/15/22
  * @project positive-thinking
  */
-public class OutOfRangeException extends IllegalArgumentException{
+public class NullSizeException extends IllegalArgumentException{
     private static final long serialVersionUID = 4664456874499611218L;
 
-    private String errorCode="OUT OF RANGE EXCEPTION";
+    private String errorCode="Size of sub lists should be greater than 0";
 
-    public OutOfRangeException(String message){
+    public NullSizeException(String message){
         super();
         this.errorCode=message;
     }
@@ -18,3 +18,4 @@ public class OutOfRangeException extends IllegalArgumentException{
         return this.errorCode;
     }
 }
+

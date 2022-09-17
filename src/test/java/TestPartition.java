@@ -1,4 +1,5 @@
 import com.partitionImplementation.Partition;
+import com.partitionImplementation.exception.NullSizeException;
 import com.partitionImplementation.exception.OutOfRangeException;
 import org.junit.After;
 import org.junit.Before;
@@ -25,6 +26,8 @@ public class TestPartition {
     public void setDown() throws Exception {
         numbers = null;
     }
+
+
     @Test
     public void testOfOneElement() {
         assertTrue(Partition.partition(numbers, 1).size() == 6);
@@ -55,11 +58,24 @@ public class TestPartition {
         assertTrue(Partition.partition(numbers, 6).size() == 1);
     }
 
-    //Testing if the exception is raised when providing
     @Test(expected = OutOfRangeException.class)
     public void testOfIndexOutOfRangeException()  {
         Partition<Integer> result= Partition.partition(numbers, 5);
         result.get(7);
+    }
+
+
+    @Test(expected = NullSizeException.class)
+    public void testOfSizeEqualTo0(){
+        Partition<Integer> result= Partition.partition(numbers, 0);
+        result.get(1);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testOfNullList() {
+        Partition<Integer> result= Partition.partition(null, 5);
+        result.get(1);
+
     }
 
 

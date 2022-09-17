@@ -1,5 +1,6 @@
 package com.partitionImplementation;
 
+import com.partitionImplementation.exception.NullSizeException;
 import com.partitionImplementation.exception.OutOfRangeException;
 
 import java.util.AbstractList;
@@ -36,14 +37,16 @@ public class Partition<U> extends AbstractList<List<U>> {
      * @return returns a list of sub lists
      */
     @Override
-    public List<U> get(int index) throws OutOfRangeException {
+    public List<U> get(int index) throws OutOfRangeException ,NullSizeException,NullPointerException {
         int start = index * size;
         int end = Math.min(start + size, list.size());
-        //'start' should be inferior than 'end' verifying if the index is out of range
-        try {
+        if(start>end){
+            throw new OutOfRangeException("index : "+index+" is out of the range of list : "+start+">"+end);
+        }else if (size==0){
+            throw new NullSizeException("Size can't equal to "+ size);
+        }else{
             return new ArrayList<>(list.subList(start, end));
-        }catch(Exception e){
-            throw new OutOfRangeException(e.getMessage() ,"index : "+index+" is out of the range of list");
+
         }
 
     }
