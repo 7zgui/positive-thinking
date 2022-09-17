@@ -16,7 +16,6 @@ clone : git clone -b partition-implementation https://github.com/7zgui/positive-
 ## Build the project using maven to get the jar
 ```sh
 move to directory using : cd positive-thinking
-rm -f -r .idea (to remove my workspace configuration and avoid conflicts)
 run : mvn clean
 then : mvn install (the jar will be generated in Target directory of the project cloned)
 ```
