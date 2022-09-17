@@ -20,7 +20,7 @@ run : mvn clean
 then : mvn install (the jar will be generated in Target directory of the project cloned and tests run)
 ```
 Test :
-![alt Tests accomplished](https://github.com/7zgui/positive-thinking/blob/main/tests.png)
+![alt Tests accomplished](https://github.com/7zgui/positive-thinking/blob/main/finalTests.png)
 
 ## Create your Java project and include the jar to your External Libraries
 
