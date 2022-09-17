@@ -17,7 +17,7 @@ clone : git clone -b partition-implementation https://github.com/7zgui/positive-
 ```sh
 move to directory using : cd positive-thinking
 run : mvn clean
-then : mvn install (the jar will be generated at in Target directory of the project cloned)
+then : mvn install (the jar will be generated in Target directory of the project cloned)
 ```
 
 ## Create your Java project and include the jar to your External Libraries
